@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "wasm-extension",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Colum",
+  "content_scripts": [
+    {
+      "matches": ["*://twitter.com/*",
+        "file:///*"],
+      "js": [ "pkg/wasm_extension.js", "static/main.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "pkg/wasm_extension.js",
+    "pkg/wasm_extension_bg.wasm",
+    "pkg/wasm_extension_bg.js"
+  ]
+
+}
